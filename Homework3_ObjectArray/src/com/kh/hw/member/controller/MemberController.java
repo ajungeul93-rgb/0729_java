@@ -8,7 +8,7 @@ public class MemberController {
 	public static final int SIZE =10;
 	
     // static 블럭 클래스가 올라갈때 한번만 실행
-	static{}
+	static{}  
 	
 	// 초기화 블럭
 	{   
