@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.kh.idol.controller.IdolController;
+import com.kh.idol.model.vo.Board;
 import com.kh.idol.model.vo.Fan;
 import com.kh.idol.model.vo.Idol;
 
@@ -211,11 +212,12 @@ public class IdolView {
 		System.out.println("4. 메인메뉴로 돌아가기");
 		System.out.print("이용하실 메뉴 번호를 선택해주세요 > ");
 		int menuNo = sc.nextInt();
+		sc.nextLine();
 		
 		switch(menuNo) {
 		case 1 : post(); break;
-		case 2 : break;
-		case 3 : break;
+		case 2 : selectBoardList(); break;
+		case 3 : findByBoardNo(); break;
 		case 4 : return;
 		}
 		}
@@ -239,12 +241,62 @@ public class IdolView {
 			
 			ic.post(boardTitle, boardContent, loginFan.getUserId());
 			
+			System.out.println("게시글 작성 성공~!");
+			
 		} else {
 			System.out.println("로그인 후 이용가능한 서비스 입니다.");
 		}
 		
+	}
+	
+	private void selectBoardList() {
 		
+		System.out.println();
+		System.out.println("\n전체 게시글 목록입니다.");
+		System.out.println();
 		
+		List<Board> boardList = ic.selectBoardList();
+		
+		if(boardList.isEmpty()) {
+			System.out.println("게시글이 아직 존재하지 않습니다.");
+			System.out.println();
+			System.out.println("첫 게시글의 주인공이 되어보세요~!");
+		} else {
+			
+			for(Board board : boardList) {
+				System.out.print("글 번호 : " + board.getBoardNo() + "\t");
+				System.out.print("글 제목 : " + board.getBoardTitle() + "\t");
+				System.out.print("작성자 : " + board.getUserId() + "\t");
+				System.out.print("작성일 : " + board.getCreateDate());
+				System.out.println();
+				
+				
+			}
+		}
+	}
+	
+	private void findByBoardNo() {
+		
+		System.out.println("\n게시글 상세 보기 서비스 입니다.");
+		
+		selectBoardList();
+		
+		System.out.println("상세 보기를 할 번호를 입력해주세요 > ");
+		int boardNo = sc.nextInt();
+		sc.nextLine();
+		
+		Board board = ic.findByBoardNo(boardNo);
+		
+		if(board != null) {
+			System.out.println("======================================");
+			System.out.println(boardNo + "번 게시글 상세보기");
+			System.out.println("\n제목" + board.getBoardTitle());
+			System.out.println("\n내용" + board.getBoardContent());
+			System.out.println("\n작성자" + board.getUserId() +
+					           "\t 작성일 : " + board.getCreateDate());
+		} else {
+			System.out.println(boardNo + "번 게시글이 존재하지 않습니다.");
+		}
 		
 	}
 }
