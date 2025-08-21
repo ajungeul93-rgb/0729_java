@@ -275,7 +275,7 @@ public class IdolController {
 	}
 
 	// 사용자가 로그인 요청시 호출되는 메소드
-	public void login(String userId, String userPwd) {
+	public Fan login(String userId, String userPwd) {
 		
 		// 컨트롤러가 가지고 있는
 		// Fan의 정보를 필드에 저장하는 Fan객체들의 주소를 가지고있는
@@ -294,9 +294,21 @@ public class IdolController {
 			
 		}
 		
-		return fan;
+		return null;
+	}
+	
+	// 로그인에 성공한 사용자가 게시글 작성 요청을 할 때 마다 호출이 되는 메소드
+	public void post(String boardTitle, String boardContent, String userId) {
+		
+		// 기존 boardNo 보다 1증가시킨 값과
+		// 사용자가 입력한 게시글 제목, 내용 값과
+		// 현재 로그인된 사용자의 아이디 값과
+		// 현재 게시글 작성 요청이 들어온 시간 값을 가지고
+		// Board객체를 만들어서 Board타입들이 들어가는 List의 요소로 추가
 		
 		
 	}
-
+	
+	
+	
 }
