@@ -8,7 +8,7 @@ public class TestClass {
 		System.out.println("ddddddddd§∑§∑§∑§§§§§∑");
 		//§©§©§©§©§©§©§©
 		
-		
+		System.out.println("»Â≈à");
 		
 	}
 	
