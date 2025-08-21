@@ -30,5 +30,7 @@ public class TestClass {
 		System.out.println("5. git push origin master");
 		
 	}
+	
+	private String hi = "ÇÏ¾ÆÇÏÀ×¤·";
 
 }
