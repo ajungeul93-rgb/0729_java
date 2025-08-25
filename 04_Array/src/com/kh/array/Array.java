@@ -130,9 +130,12 @@ public class Array {
 		 * //System.out.println(doubles.length);
 		 * 
 		 * 
-		 * //System.out.println(i); localvariable == 초기화를 진행하지 않으면 사용할 수 없음 i = 1;
-		 * System.out.println(i); System.out.println(integers);
-		 * System.out.println(integers[0]); integers[0] = 1;
+		 * //System.out.println(i); 
+		 * localvariable == 초기화를 진행하지 않으면 사용할 수 없음 i = 1;
+		 * System.out.println(i); 
+		 * System.out.println(integers);
+		 * System.out.println(integers[0]); 
+		 * integers[0] = 1;
 		 */
 
 		/*
@@ -145,22 +148,30 @@ public class Array {
 
 		// 인포, A강의장, B강의장, C강의장, 사무실
 		/*
-		 * String[] KH정보교육원종로지원; KH정보교육원종로지원 = new String[5];
+		 * String[] KH정보교육원종로지원; 
+		 * KH정보교육원종로지원 = new String[5];
 		 * System.out.println("종로점 주소: " + KH정보교육원종로지원);
 		 * 
-		 * KH정보교육원종로지원[0] = "인포"; KH정보교육원종로지원[1] = "A강의장"; KH정보교육원종로지원[2] = "B강의장";
-		 * KH정보교육원종로지원[3] = "C강의장"; KH정보교육원종로지원[4] = "사무실";
+		 * KH정보교육원종로지원[0] = "인포"; 
+		 * KH정보교육원종로지원[1] = "A강의장"; 
+		 * KH정보교육원종로지원[2] = "B강의장";
+		 * KH정보교육원종로지원[3] = "C강의장"; 
+		 * KH정보교육원종로지원[4] = "사무실";
 		 * 
-		 * // C강의장 출력 //System.out.println(KH정보교육원종로지원[3]);
+		 * // C강의장 출력 
+		 * //System.out.println(KH정보교육원종로지원[3]);
 		 * 
-		 * System.out.println(KH정보교육원종로지원[0]); System.out.println(KH정보교육원종로지원[1]);
-		 * System.out.println(KH정보교육원종로지원[2]); System.out.println(KH정보교육원종로지원[3]);
+		 * System.out.println(KH정보교육원종로지원[0]); 
+		 * System.out.println(KH정보교육원종로지원[1]);
+		 * System.out.println(KH정보교육원종로지원[2]); 
+		 * System.out.println(KH정보교육원종로지원[3]);
 		 * System.out.println(KH정보교육원종로지원[4]);
 		 * 
 		 * System.out.println("-----반복문-------");
 		 * 
 		 * for(int index = 0; index < 5; index++) {
-		 * System.out.println(KH정보교육원종로지원[index]); }
+		 * System.out.println(KH정보교육원종로지원[index]); 
+		 * }
 		 */
 
 		int number1 = 3;
